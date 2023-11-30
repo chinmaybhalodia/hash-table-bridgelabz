@@ -52,6 +52,20 @@ public class HashTable<K extends Comparable<K>, V> {
         return null;
     }
 
+    // UC3: remove method similar to hashmap
+    public void remove(K key) {
+        int index = this.getIndexforKey(key);
+        LinkedList<K, V> list = hashtable[index];
+        MyMapNode<K, V> node = list.head;
+        while (node != null) {
+            if (node.getKey().equals(key)) {
+                list.deleteNode(key);
+                return;
+            }
+            node = node.next;
+        }
+    }
+
     // similar to getordefault method of hashmap
     public V getOrDefault(K key, V default_value) {
         V value = this.get(key);
