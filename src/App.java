@@ -4,7 +4,7 @@ public class App {
         // UC1: creating linkedlist of MyMapNode
         HashTable<String, Integer> hashtable = new HashTable<>();
 
-        String sentence = "to be or not to be";
+        String sentence = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
         countFrequency(sentence, hashtable);
 
         System.out.println("The frequencies of the words are:");

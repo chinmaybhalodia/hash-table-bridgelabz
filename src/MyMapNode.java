@@ -9,6 +9,10 @@ public class MyMapNode<K extends Comparable<K>, V> {
         this.next = null;
     }
 
+    public void setKey(K key) {
+        this.key = key;
+    }
+
     public K getKey() {
         return this.key;
     }
